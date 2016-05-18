@@ -1,0 +1,13 @@
+<h3> {{menu.name}} </h3>
+<ul>
+{% for item in menuitems %}
+	{% if item == "in" %}
+		<ul>
+	{% elif item == "out" %}
+		</ul>
+	{% else %}
+		<li> <a href="{{item.url}}">{{item.title}}</a></li>
+	{% endif %}
+{% endfor %}
+
+</ul>
